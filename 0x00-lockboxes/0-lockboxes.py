@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Method to check for keys amongst boxes"""
+
+
+
 def canUnlockAll(boxes):
     visited = set()
     visited.add(0)
