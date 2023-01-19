@@ -33,5 +33,5 @@ print(canUnlockAll(boxes))
 # Error out index out of range
 # integers within boxes are greater than the amount of boxes
 # if two more boxes are present, no error occurs
-boxes = [[1, 4, 6], [1, 4, 6], [1, 4, 8], [1, 4, 6], [1, 4, 6]]
+boxes = [[1, 4, 6], [1, 4, 6], [1, 4, 5], [1, 4, 6], [1, 4, 6]]
 print(canUnlockAll(boxes))

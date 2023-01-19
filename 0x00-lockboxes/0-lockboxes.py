@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """Method to check for keys amongst boxes"""
 
+# Method errors out on final test
+# list ends up being out of range
+
 
 def canUnlockAll(boxes):
     visited = set()
@@ -9,7 +12,9 @@ def canUnlockAll(boxes):
     while stack:
         box = stack.pop()
         for key in boxes[box]:
-            if key not in visited:  # or if visited
+            if key not in visited:
+                if key > len(boxes):
+                    continue
                 visited.add(key)
                 stack.append(key)
     return len(visited) == len(boxes)
