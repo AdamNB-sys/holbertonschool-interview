@@ -1,20 +1,22 @@
 #!/usr/bin/python3
 """Method to check for keys amongst boxes"""
 
-# Method errors out on final test
-# list ends up being out of range
-
 
 def canUnlockAll(boxes):
-    visited = set()
-    visited.add(0)
-    stack = [0]
-    while stack:
-        box = stack.pop()
-        for key in boxes[box]:
-            if key not in visited:
-                if key > len(boxes):
-                    continue
-                visited.add(key)
-                stack.append(key)
-    return len(visited) == len(boxes)
+    """Return true if all boxes have keys, else return false"""
+    availableKeys = [0]
+    # Iterate available keys and add new keys not already found
+    for x in availableKeys:
+        for key in boxes[x]:
+            # Add a key if it's within range of boxes,
+            # and it has not already been found
+            if key not in availableKeys and key < len(boxes):
+                availableKeys.append(key)
+    # If any numbers are missing from available keys
+    # and not all boxes are open, return false
+    x = 0
+    while x < len(boxes):
+        if x not in availableKeys:
+            return False
+        x += 1
+    return True
