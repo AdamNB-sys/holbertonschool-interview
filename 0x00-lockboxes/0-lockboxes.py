@@ -14,9 +14,10 @@ def canUnlockAll(boxes):
                 availableKeys.append(key)
     # If any numbers are missing from available keys
     # and not all boxes are open, return false
-    x = 0
+    return len(availableKeys) == len(boxes)
+    '''x = 0
     while x < len(boxes):
         if x not in availableKeys:
             return False
         x += 1
-    return True
+    return True'''
