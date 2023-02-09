@@ -3,7 +3,7 @@
 /**
  * sandpiles_sum - computes sum of two sandpiles
  * @grid1: first sandpile
- * @grid2: second sanddpile
+ * @grid2: second sandpile
  * Return: void
  */
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
@@ -22,7 +22,6 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
     /* Check if the grid is unstable and perform toppling until it's stable */
     while (!is_stable(grid1))
     {
-        printf("=\n");
         print_grid(grid1);
         topple(grid1);
     }
@@ -59,6 +58,7 @@ static void print_grid(int grid[3][3])
 {
     int i, j;
 
+    printf("=\n");
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++)
@@ -76,16 +76,17 @@ static void print_grid(int grid[3][3])
  */
 void topple(int grid[3][3])
 {
-    int copy[3][3];
+    int copy[3][3] = {{0}};
     int i, j;
 
+    /**
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++)
         {
             copy[i][j] = 0;
         }
-    }
+    } */
 
     for (i = 0; i < 3; i++)
     {
