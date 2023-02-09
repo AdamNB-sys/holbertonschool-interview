@@ -10,7 +10,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
     int i, j;
 
-    // Add the values of the two grids
+    /* Add the values of the two grids */
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++) 
@@ -19,7 +19,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
         }
     }
 
-    // Check if the grid is unstable and perform toppling until it's stable
+    /* Check if the grid is unstable and perform toppling until it's stable */
     while (!is_stable(grid1))
     {
         printf("=\n");
