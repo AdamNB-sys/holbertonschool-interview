@@ -6,14 +6,14 @@
  * @grid2: second sanddpile
  * Return: void
  */
-void sandpiles_sum(int grid1[3][3], int grid2[3][3]) 
+void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
     int i, j;
 
     /* Add the values of the two grids */
     for (i = 0; i < 3; i++)
     {
-        for (j = 0; j < 3; j++) 
+        for (j = 0; j < 3; j++)
         {
             grid1[i][j] += grid2[i][j];
         }
@@ -36,6 +36,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 int is_stable(int grid[3][3])
 {
     int i, j;
+
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++)
@@ -57,6 +58,7 @@ int is_stable(int grid[3][3])
 static void print_grid(int grid[3][3])
 {
     int i, j;
+
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++)
